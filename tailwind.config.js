@@ -4,14 +4,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        ivory: "#f4f1ea",
+        ivory: "#faf7f1",
         cream: "#ebe7dd",
-        oat: "#d7d0c3",
-        latte: "#4f5b45",
-        mocha: "#151512",
-        stonewash: "#5f6059",
-        gold: "#9a865f",
-        pine: "#1f2d21",
+        oat: "#ebe0cf",
+        latte: "#d5bda2",
+        mocha: "#6f6255",
+        stonewash: "#a8998a",
+        gold: "#d7c28e",
+        pine: "#5d715b",
       },
       fontFamily: {
         body: ['"Noto Serif TC"', "serif"],
@@ -19,11 +19,11 @@ export default {
         script: ['"Allura"', "cursive"],
       },
       boxShadow: {
-        soft: "0 28px 70px rgba(20, 20, 16, 0.22)",
-        card: "0 16px 36px rgba(20, 20, 16, 0.18)",
+        soft: "0 24px 80px rgba(125, 102, 76, 0.16)",
+        card: "0 18px 48px rgba(125,102,76,0.14)",
       },
       backgroundImage: {
-        aura: "linear-gradient(180deg, rgba(244,241,234,0.96), rgba(235,231,221,0.92))",
+        aura: "radial-gradient(circle at top, rgba(255,255,255,0.92), rgba(250,247,241,0.84) 42%, rgba(235,224,207,0.65) 100%)",
       },
       keyframes: {
         float: {
