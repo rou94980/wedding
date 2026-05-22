@@ -13,7 +13,7 @@ export default function SectionHeading({
     <div className={`flex max-w-2xl flex-col gap-4 ${alignment}`}>
       {eyebrow ? <span className="gold-label">{eyebrow}</span> : null}
       <div className="space-y-3">
-        <h2 className="font-display text-4xl font-semibold tracking-[0.04em] text-mocha sm:text-5xl">
+        <h2 className="font-display text-4xl font-medium italic leading-tight text-mocha sm:text-5xl">
           {title}
         </h2>
         {description ? (
@@ -25,4 +25,3 @@ export default function SectionHeading({
     </div>
   );
 }
-

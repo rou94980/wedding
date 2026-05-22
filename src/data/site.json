@@ -9,14 +9,14 @@
     "scriptSubtitle": "A quiet promise, softly kept"
   },
   "hero": {
-    "description": "一封溫柔展開的邀請，邀請你與我們一起走進這個重要的日子。首頁目前先採用單張全版婚紗照，並保留三圖拼接 Hero 的切換結構。",
+    "description": "A quiet celebration in deep greens, paper texture, and honest light. Join us as we begin our next chapter.",
     "scrollHint": "Scroll",
     "activeVariant": "single",
     "variants": {
       "single": {
         "type": "single",
-        "image": "assets/images/LINE_ALBUM_C_260522_5.jpg",
-        "alt": "Benny and Cindy walking hand in hand on a grassy hill under a bright sky."
+        "image": "assets/images/LINE_ALBUM_C_260522_31.jpg",
+        "alt": "Benny and Cindy."
       },
       "triptych": {
         "type": "triptych",
@@ -41,17 +41,20 @@
     }
   },
   "event": {
-    "eyebrow": "Our Details",
-    "title": "婚禮資訊",
-    "description": "目前先以假資料示意，後續只需要更新 JSON 即可同步替換首頁內容。",
+    "eyebrow": "Dress Code",
+    "title": "Let's celebrate love, laughter, and happily ever after.",
+    "description": "歡迎穿著素色T-Shirt前來，請別太拘束！​",
+    "image": "assets/images/LINE_ALBUM_C_260522_21.jpg",
+    "imageAlt": "Benny and Cindy standing together in wedding attire.",
     "dateLabel": "日期",
-    "date": "2026.11.08 Sunday",
+    "date": "2026.08.08 Saturday",
     "timeLabel": "時間",
-    "time": "11:30 Ceremony  |  12:00 Lunch",
+    "time": "5:00 PM  證婚儀式",
     "venueLabel": "地點",
-    "venue": "The Garden Hall",
+    "venue": "TA Beach 101&Pizza",
     "addressLabel": "地址",
-    "address": "No. 88, Blossom Road, Xinyi District, Taipei City"
+    "address": "110臺北市信義區信義路五段18號B1",
+    "addressTips": "(捷運101/世貿站 3號出口)"
   },
   "gallery": {
     "eyebrow": "Moments",
@@ -60,29 +63,36 @@
   },
   "countdown": {
     "eyebrow": "Save The Date",
-    "title": "倒數計時",
+    "title": "2026年 8 月 1 日",
     "description": "期待在那一天，與你一起分享我們的喜悅。",
-    "target": "2026-11-08T11:30:00+08:00"
+    "target": "2026-11-08T11:30:00+08:00",
+    "backgroundImage": "assets/images/LINE_ALBUM_C_260522_6.jpg",
+    "backgroundAlt": "Benny and Cindy lying together on the grass."
   },
   "contacts": {
     "eyebrow": "Contact",
     "title": "聯絡方式",
-    "description": "如需協助交通、出席回覆或其他問題，歡迎隨時聯繫我們。",
+    "description": "如有任何需求或其他問題，歡迎隨時聯繫我們。",
+    "backgroundImage": "assets/images/LINE_ALBUM_C_260522_32.jpg",
+    "backgroundAlt": "Benny and Cindy standing in an open green field.",
     "items": [
       {
-        "label": "Phone",
-        "value": "+886 912 345 678",
-        "href": "tel:+886912345678"
+        "label": "陳冠宇 Benny",
+        "mobile": "0983 521 913",
+        "ig": "@bennychennnn",
+        "href": "tel:+886983521913"
       },
       {
-        "label": "LINE",
-        "value": "@bennycindy",
-        "href": "https://line.me/R/ti/p/@bennycindy"
+        "label": "黃珮華 Cindy",
+        "mobile": "0955 588 933",
+        "ig": "@cindyhuanggggg",
+        "href": "tel:+886955588933"
       },
       {
-        "label": "Instagram",
-        "value": "@bennyandcindy",
-        "href": "https://www.instagram.com/bennyandcindy/"
+        "label": "黃珮菁 Peggy （當天）",
+        "mobile": "0935 236 659",
+        "ig": "-",
+        "href": "tel:+886935236659"
       }
     ]
   },
@@ -96,4 +106,3 @@
     "closing": "With love, see you soon"
   }
 }
-
