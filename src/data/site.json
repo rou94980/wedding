@@ -1,0 +1,99 @@
+{
+  "meta": {
+    "siteTitle": "Benny & Cindy | Wedding Invitation",
+    "siteDescription": "A minimal Korean-style wedding invitation website built with React, Vite and Tailwind CSS."
+  },
+  "couple": {
+    "kicker": "Wedding Day",
+    "displayName": "Benny & Cindy",
+    "scriptSubtitle": "A quiet promise, softly kept"
+  },
+  "hero": {
+    "description": "一封溫柔展開的邀請，邀請你與我們一起走進這個重要的日子。首頁目前先採用單張全版婚紗照，並保留三圖拼接 Hero 的切換結構。",
+    "scrollHint": "Scroll",
+    "activeVariant": "single",
+    "variants": {
+      "single": {
+        "type": "single",
+        "image": "assets/images/LINE_ALBUM_C_260522_5.jpg",
+        "alt": "Benny and Cindy walking hand in hand on a grassy hill under a bright sky."
+      },
+      "triptych": {
+        "type": "triptych",
+        "images": [
+          {
+            "src": "assets/images/LINE_ALBUM_C_260522_1.jpg",
+            "alt": "Benny holding flowers in a green field.",
+            "objectPosition": "center"
+          },
+          {
+            "src": "assets/images/LINE_ALBUM_C_260522_2.jpg",
+            "alt": "Benny and Cindy embracing in an outdoor field.",
+            "objectPosition": "center"
+          },
+          {
+            "src": "assets/images/LINE_ALBUM_C_260522_6.jpg",
+            "alt": "Benny and Cindy in a studio portrait.",
+            "objectPosition": "center top"
+          }
+        ]
+      }
+    }
+  },
+  "event": {
+    "eyebrow": "Our Details",
+    "title": "婚禮資訊",
+    "description": "目前先以假資料示意，後續只需要更新 JSON 即可同步替換首頁內容。",
+    "dateLabel": "日期",
+    "date": "2026.11.08 Sunday",
+    "timeLabel": "時間",
+    "time": "11:30 Ceremony  |  12:00 Lunch",
+    "venueLabel": "地點",
+    "venue": "The Garden Hall",
+    "addressLabel": "地址",
+    "address": "No. 88, Blossom Road, Xinyi District, Taipei City"
+  },
+  "gallery": {
+    "eyebrow": "Moments",
+    "title": "婚紗照片",
+    "description": "依照素材特性安排了留白與人物近景交錯的節奏，互動只保留淡入、微位移與點擊放大，讓照片本身成為主角。"
+  },
+  "countdown": {
+    "eyebrow": "Save The Date",
+    "title": "倒數計時",
+    "description": "期待在那一天，與你一起分享我們的喜悅。",
+    "target": "2026-11-08T11:30:00+08:00"
+  },
+  "contacts": {
+    "eyebrow": "Contact",
+    "title": "聯絡方式",
+    "description": "如需協助交通、出席回覆或其他問題，歡迎隨時聯繫我們。",
+    "items": [
+      {
+        "label": "Phone",
+        "value": "+886 912 345 678",
+        "href": "tel:+886912345678"
+      },
+      {
+        "label": "LINE",
+        "value": "@bennycindy",
+        "href": "https://line.me/R/ti/p/@bennycindy"
+      },
+      {
+        "label": "Instagram",
+        "value": "@bennyandcindy",
+        "href": "https://www.instagram.com/bennyandcindy/"
+      }
+    ]
+  },
+  "seatSearch": {
+    "status": "Phase 2 Ready",
+    "title": "座位查詢",
+    "description": "已預留獨立路由與按鈕入口。第二階段可直接擴充賓客姓名搜尋、桌次顯示與出席資訊整合。",
+    "buttonLabel": "前往座位查詢"
+  },
+  "footer": {
+    "closing": "With love, see you soon"
+  }
+}
+
