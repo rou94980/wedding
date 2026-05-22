@@ -25,11 +25,10 @@ function normalizeBasePath(value) {
 
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
-  const fallbackBase = mode === 'production' ? '/wedding-invitation/' : '/';
+  const fallbackBase = mode === 'production' ? '/wedding/' : '/';
 
   return {
     plugins: [react()],
     base: normalizeBasePath(env.VITE_BASE_PATH || fallbackBase),
   };
 });
-
