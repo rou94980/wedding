@@ -61,7 +61,9 @@ export default function HeroSection({ couple, hero }) {
             {couple.displayName}
           </h1>
           <p className="mx-auto mt-7 max-w-xl text-sm leading-7 text-ivory/82 sm:text-base">
-            {hero.description}
+            在這個重要的時刻，謝謝你的出席讓這個充滿意義的日子更加幸福~
+            <br />
+            2026/8/1 期待與您見面！
           </p>
         </motion.div>
       </div>

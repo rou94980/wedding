@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useState } from "react";
 import { resolveAssetPath } from "../../lib/asset";
-import PhotoLightbox from "./PhotoLightbox";
+import Reveal from "../common/Reveal";
 
 const extraGalleryItems = Array.from({ length: 24 }, (_, index) => {
   const number = index + 12;
@@ -25,7 +25,7 @@ const albumPhoto = (number, title, objectPosition = "center") => ({
   objectPosition,
 });
 
-export default function GallerySection({ gallery }) {
+export default function GallerySection({ gallery, contacts }) {
   const [selectedPhoto, setSelectedPhoto] = useState(null);
   const allPhotos = [...gallery.items, ...extraGalleryItems];
   const pick = (...indexes) =>
@@ -57,116 +57,60 @@ export default function GallerySection({ gallery }) {
 
   return (
     <>
-      <section className="bg-[#f7f4ed] py-16 sm:py-24">
-        <div className="section-shell">
-          <div className="mx-auto max-w-5xl bg-[#fbfaf5] shadow-soft">
-            <div className="grid h-64 grid-cols-3 overflow-hidden sm:h-80">
-              {topStrip.map((photo, index) => (
-                <motion.button
-                  key={photo.id}
-                  type="button"
-                  onClick={() => setSelectedPhoto(photo)}
-                  aria-label={`Open photo ${photo.title}`}
-                  className="group relative overflow-hidden bg-pine"
-                  initial={{ opacity: 0, y: 26 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.25 }}
-                  transition={{ duration: 0.8, delay: index * 0.08 }}
-                >
-                  <img
-                    src={resolveAssetPath(photo.src)}
-                    alt={photo.alt}
-                    className="h-full w-full object-cover contrast-110 saturate-[0.68] transition duration-700 group-hover:scale-[1.035]"
-                    style={{ objectPosition: photo.objectPosition || "center" }}
-                  />
-                  <div className="absolute inset-0 bg-pine/18 mix-blend-multiply" />
-                </motion.button>
-              ))}
-            </div>
-
-            <div className="grid gap-5 px-6 py-12 sm:px-12 lg:grid-cols-[0.9fr_1fr] lg:px-16 lg:py-16 ">
-              <RevealText gallery={gallery} />
-
+      <section className="max-w-6xl px-6 sm:px-8 lg:px-12 pb-16 sm:pb-24 mx-auto">
+        <div className="overflow-hidden pb-14 sm:pb-16">
+          <div className="gallery-carousel-track gap-3 sm:gap-4">
+            {carouselLoop.map((photo, index) => (
               <motion.button
+                key={`${photo.id}-${index}`}
                 type="button"
-                onClick={() => setSelectedPhoto(feature)}
-                aria-label={`Open photo ${feature.title}`}
-                className="group justify-self-center overflow-hidden bg-pine shadow-card lg:justify-self-end"
-                initial={{ opacity: 0, y: 34 }}
+                onClick={() => setSelectedPhoto(photo)}
+                aria-label={`Open photo ${photo.title}`}
+                className="group gallery-carousel-cell overflow-hidden bg-pine"
+                initial={{ opacity: 0, y: 28 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.25 }}
-                transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.75, delay: (index % 6) * 0.05 }}
               >
                 <img
-                  src={resolveAssetPath(feature.src)}
-                  alt={feature.alt}
-                  className="aspect-[4/5] w-full max-w-[22rem] object-cover contrast-110 saturate-[0.7] transition duration-700 group-hover:scale-[1.03]"
-                  style={{ objectPosition: feature.objectPosition || "center" }}
+                  src={resolveAssetPath(photo.src)}
+                  alt={photo.alt}
+                  className="aspect-[3/4] w-full object-cover contrast-110 saturate-[0.72] transition duration-700 group-hover:scale-[1.035]"
+                  style={{
+                    objectPosition: photo.objectPosition || "center",
+                  }}
                 />
               </motion.button>
-            </div>
+            ))}
+          </div>
+        </div>
 
-            <div className="px-6 pb-12 sm:px-12 lg:px-0 ">
-              <div className="overflow-hidden bg-[#f7f4ed] p-3 sm:p-4">
-                <div className="gallery-carousel-track gap-3 sm:gap-4">
-                  {carouselLoop.map((photo, index) => (
-                    <motion.button
-                      key={`${photo.id}-${index}`}
-                      type="button"
-                      onClick={() => setSelectedPhoto(photo)}
-                      aria-label={`Open photo ${photo.title}`}
-                      className="group gallery-carousel-cell overflow-hidden bg-pine shadow-card"
-                      initial={{ opacity: 0, y: 28 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true, amount: 0.2 }}
-                      transition={{ duration: 0.75, delay: (index % 6) * 0.05 }}
-                    >
-                      <img
-                        src={resolveAssetPath(photo.src)}
-                        alt={photo.alt}
-                        className="aspect-[3/4] w-full object-cover contrast-110 saturate-[0.72] transition duration-700 group-hover:scale-[1.035]"
-                        style={{
-                          objectPosition: photo.objectPosition || "center",
-                        }}
-                      />
-                    </motion.button>
-                  ))}
-                </div>
+        <div className="px-6 sm:px-10 lg:px-16 py-24 text-center bg-[#fbfaf5]">
+          <h3 className="font-display text-4xl font-medium italic leading-none text-mocha sm:text-5xl">
+            Contact
+            <br />
+            <span className="text-lg text-stonewash">
+              如有任何需求或其他問題，歡迎隨時聯繫我們。
+            </span>
+          </h3>
+          <div className="mx-auto max-w-4xl pt-10 flex flex-col md:flex-row divide-y md:divide-y-0 md:divide-x divide-mocha/18">
+            {contacts.items.map((item, index) => (
+              <div key={index} className="flex-1 px-3 py-8 text-center">
+                <p className="font-display text-xl italic text-mocha">
+                  {item.label}
+                </p>
+                <p className="mt-2 text-sm text-mocha">{item.mobile}</p>
+                <p className="mt-2 text-sm text-mocha">{item.ig}</p>
               </div>
-            </div>
-
-            <div className="px-6 pb-14 text-center sm:px-12 lg:px-16 ">
-              <h3 className="font-display text-4xl font-medium italic leading-none text-mocha sm:text-5xl">
-                Choose your
-                <br />
-                experience
-              </h3>
-              <div className="mx-auto mt-8 grid max-w-xl grid-cols-3 divide-x divide-mocha/18 ">
-                {experiences.map((item) => (
-                  <div key={item.label} className="px-3">
-                    <p className="font-display text-2xl italic text-mocha">
-                      {item.number}
-                    </p>
-                    <p className="mt-2 text-[0.62rem] uppercase tracking-[0.22em] text-stonewash">
-                      {item.label}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
-
-      <PhotoLightbox
-        photo={selectedPhoto}
-        onClose={() => setSelectedPhoto(null)}
-      />
     </>
   );
 }
 
-function RevealText({ gallery }) {
+function RevealText({ gallery, contacts }) {
   return (
     <motion.div
       className="max-w-sm self-center"
@@ -175,20 +119,31 @@ function RevealText({ gallery }) {
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.85, ease: [0.22, 1, 0.36, 1] }}
     >
-      <span className="gold-label">{gallery.eyebrow}</span>
-      <h2 className="mt-6 font-display text-4xl font-medium italic leading-[0.95] text-mocha sm:text-5xl">
-        Capturing your
-        <br />
-        magic moment
-      </h2>
-      <p className="mt-5 text-sm leading-7 text-stonewash">
-        {gallery.description}
-      </p>
+      <span className="gold-label">{contacts.eyebrow}</span>
+      {/* <h2 className="mt-6 font-display text-4xl font-medium italic leading-[0.95] text-mocha sm:text-5xl">
+        {contacts.title}
+      </h2> */}
+      <p className="text-lg text-mocha mt-3 mb-5">{contacts.description}</p>
+      <div>
+        {contacts.items.map((item, index) => (
+          <div key={index} className="mt-6">
+            <p className="text-xl text-mocha leading-8">
+              <span className="text-stonewash text-sm mr-3 mb-auto">新郎</span>
+              {item.label}
+            </p>
+            <div className="text-sm text-stonewash">
+              <span>{item.mobile}</span>
+              <span className="ml-7">{item.ig}</span>
+            </div>
+          </div>
+        ))}
+      </div>
+
       <button
         type="button"
-        className="mt-6 border border-mocha/25 px-5 py-2 text-[0.65rem] uppercase tracking-[0.24em] text-mocha"
+        className="mt-12 border border-mocha/25 px-5 py-2 text-[0.65rem] uppercase tracking-[0.24em] text-mocha"
       >
-        Gallery
+        座位查詢
       </button>
     </motion.div>
   );

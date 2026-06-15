@@ -1,22 +1,22 @@
 {
   "meta": {
-    "siteTitle": "Benny & Cindy | Wedding Invitation",
-    "siteDescription": "A minimal Korean-style wedding invitation website built with React, Vite and Tailwind CSS."
+    "siteTitle": "Cindy & Benny | Wedding Invitation",
+    "siteDescription": "你的出席讓這天更加幸福 2026/8/1 期待與您見面！"
   },
   "couple": {
     "kicker": "Wedding Day",
-    "displayName": "Benny & Cindy",
+    "displayName": "Cindy & Benny",
     "scriptSubtitle": "A quiet promise, softly kept"
   },
   "hero": {
-    "description": "A quiet celebration in deep greens, paper texture, and honest light. Join us as we begin our next chapter.",
+    "description": "在這個重要的時刻，謝謝你的出席讓這個充滿意義的日子更加幸福~ 2026/8/1 期待與您見面！",
     "scrollHint": "Scroll",
     "activeVariant": "single",
     "variants": {
       "single": {
         "type": "single",
         "image": "assets/images/LINE_ALBUM_C_260522_31.jpg",
-        "alt": "Benny and Cindy."
+        "alt": "Cindy and Benny."
       },
       "triptych": {
         "type": "triptych",
@@ -47,9 +47,9 @@
     "image": "assets/images/LINE_ALBUM_C_260522_21.jpg",
     "imageAlt": "Benny and Cindy standing together in wedding attire.",
     "dateLabel": "日期",
-    "date": "2026.08.08 Saturday",
+    "date": "2026.08.01 Saturday",
     "timeLabel": "時間",
-    "time": "5:00 PM  證婚儀式",
+    "time": "5:15 PM  迎賓入席",
     "venueLabel": "地點",
     "venue": "TA Beach 101&Pizza",
     "addressLabel": "地址",
@@ -67,30 +67,30 @@
     "description": "期待在那一天，與你一起分享我們的喜悅。",
     "target": "2026-11-08T11:30:00+08:00",
     "backgroundImage": "assets/images/LINE_ALBUM_C_260522_6.jpg",
-    "backgroundAlt": "Benny and Cindy lying together on the grass."
+    "backgroundAlt": "Benny and Cindy"
   },
   "contacts": {
     "eyebrow": "Contact",
     "title": "聯絡方式",
     "description": "如有任何需求或其他問題，歡迎隨時聯繫我們。",
     "backgroundImage": "assets/images/LINE_ALBUM_C_260522_32.jpg",
-    "backgroundAlt": "Benny and Cindy standing in an open green field.",
+    "backgroundAlt": "Benny and Cindy.",
     "items": [
       {
-        "label": "陳冠宇 Benny",
-        "mobile": "0983 521 913",
+        "label": "陳冠宇 Benny ",
+        "mobile": "0983-521-913",
         "ig": "@bennychennnn",
         "href": "tel:+886983521913"
       },
       {
         "label": "黃珮華 Cindy",
-        "mobile": "0955 588 933",
+        "mobile": "0955-588-933",
         "ig": "@cindyhuanggggg",
         "href": "tel:+886955588933"
       },
       {
-        "label": "黃珮菁 Peggy （當天）",
-        "mobile": "0935 236 659",
+        "label": "黃珮菁 Peggy (當天)",
+        "mobile": "0935-236-659",
         "ig": "-",
         "href": "tel:+886935236659"
       }

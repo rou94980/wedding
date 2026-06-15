@@ -34,11 +34,11 @@ export default function InfoSection({ event }) {
               <span className="gold-label">{event.eyebrow}</span>
               <div className="flex flex-wrap">
                 <div className="w-full flex items-center gap-3 mb-4">
-                  <div className="w-[30px] h-[30px] rounded-full bg-[#fff] border border-mocha"></div>
-                  <div className="w-[30px] h-[30px] rounded-full bg-mocha"></div>
-                  <div className="w-[30px] h-[30px] rounded-full bg-mocha"></div>
-                  <div className="w-[30px] h-[30px] rounded-full bg-mocha"></div>
-                  <div className="w-[30px] h-[30px] rounded-full bg-mocha"></div>
+                  <div className="w-[30px] h-[30px] rounded-full bg-[#FDFBEF] border border-[#786658]"></div>
+                  <div className="w-[30px] h-[30px] rounded-full bg-[#D8BFA0]"></div>
+                  <div className="w-[30px] h-[30px] rounded-full bg-[#BD9F7D]"></div>
+                  <div className="w-[30px] h-[30px] rounded-full bg-[#786658]"></div>
+                  <div className="w-[30px] h-[30px] rounded-full bg-[#493322]"></div>
                 </div>
                 <div className="">
                   <p className="text-sm italic leading-7 text-stonewash">
@@ -64,7 +64,8 @@ export default function InfoSection({ event }) {
               </div>
 
               <p className="max-w-md text-sm leading-7 text-stonewash">
-                - 因場地有沙灘造景，提醒您避免穿著深色鞋子以免弄髒您的愛鞋 ​​
+                -
+                您即將進入海灘！提醒您穿著舒適好走即可，並避免穿著深色鞋子以免弄髒您的愛鞋
                 <br />- 當天提供位上西餐，請您依照指示入座，以便供餐順利
               </p>
             </div>

@@ -10,7 +10,7 @@ import galleryData from "../data/gallery.json";
 import siteData from "../data/site.json";
 
 export default function HomePage() {
-  const [introComplete, setIntroComplete] = useState(false);
+  const [introComplete, setIntroComplete] = useState(true);
 
   const gallery = useMemo(
     () => ({
@@ -42,29 +42,17 @@ export default function HomePage() {
 
   return (
     <>
-      <EnvelopeIntro
+      {/* <EnvelopeIntro
         coupleName={siteData.couple.displayName}
         subtitle={siteData.couple.scriptSubtitle}
         onComplete={() => setIntroComplete(true)}
         bg={siteData.hero.variants.single.image}
-      />
+      /> */}
 
       <main className="relative overflow-hidden">
         <HeroSection couple={siteData.couple} hero={siteData.hero} />
         <InfoSection event={siteData.event} />
-        <div className="soft-divider" />
-        <ContactSection contacts={siteData.contacts} />
-        <div className="soft-divider" />
-        <GallerySection gallery={gallery} />
-        <div className="soft-divider" />
-        <CountdownSection countdown={siteData.countdown} />
-        <SeatSearchTeaser seatSearch={siteData.seatSearch} />
-
-        <footer className="pb-12 text-center">
-          <p className="font-display text-4xl italic text-mocha">
-            {siteData.footer.closing}
-          </p>
-        </footer>
+        <GallerySection gallery={gallery} contacts={siteData.contacts} />
       </main>
     </>
   );
